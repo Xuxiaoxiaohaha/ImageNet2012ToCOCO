@@ -1,5 +1,5 @@
-# ImageNet2012ToCOCO
-You can convert ImageNet2012 to COCO by this repository(But only support Image classification and Object Detection).
+# ImageNetToCOCO
+You can convert ImageNet to COCO by this repository(But only support Image classification and Object Detection).
 # 中文
 本项目以ImageNet2012为例，来生成COCO中的`instances_train.json`和`instances_val.json`文件，用于图片分类和目标检测任务（segmentation目前尚未支持）。
 我们项目的文件布局如下所示。
