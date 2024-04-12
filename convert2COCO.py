@@ -60,7 +60,7 @@ def gen_images_gen_annotations_train(my_data,train_images_xml_dir_path,wnid_2_id
         for file in xml_files:
             # -- for images --  
             license = 1
-            file_name = ''
+            file_name = parent_dir + '/' + file.replace('xml','JPEG')
             coco_url = 'http://fakeurl'
             height = 0
             width = 0
@@ -82,9 +82,7 @@ def gen_images_gen_annotations_train(my_data,train_images_xml_dir_path,wnid_2_id
             # -- for images --
             while i < len(lines):
                 line = lines[i].strip()
-                if 'filename' in line:
-                    file_name = parent_dir + '/' + line.split('>')[1].split('<')[0] + '.JPEG'
-                elif 'height' in line:
+                if 'height' in line:
                     height = int(line.split('>')[1].split('<')[0])
                 elif 'width' in line:
                     width = int(line.split('>')[1].split('<')[0])
@@ -136,7 +134,7 @@ def gen_images_gen_annotations_val(my_data,val_images_xml_dir_path,wnid_2_id_nam
     for file in tqdm(xml_files):
         # -- for images --  
         license = 1
-        file_name = ''
+        file_name = file.replace('xml','JPEG')
         coco_url = 'http://fakeurl'
         height = 0
         width = 0
@@ -158,9 +156,7 @@ def gen_images_gen_annotations_val(my_data,val_images_xml_dir_path,wnid_2_id_nam
         # -- for images --
         while i < len(lines):
             line = lines[i].strip()
-            if 'filename' in line:
-                file_name = line.split('>')[1].split('<')[0] + '.JPEG'
-            elif 'height' in line:
+            if 'height' in line:
                 height = int(line.split('>')[1].split('<')[0])
             elif 'width' in line:
                 width = int(line.split('>')[1].split('<')[0])
