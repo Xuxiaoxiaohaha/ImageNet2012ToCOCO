@@ -71,7 +71,6 @@ def gen_images_gen_annotations_train(my_data,train_images_xml_dir_path,wnid_2_id
             area = 0
             iscrowd = 0
             bbox = [] # xywh
-            category_id = 0
             xmin = 0
             ymin = 0
             xmax = 0
