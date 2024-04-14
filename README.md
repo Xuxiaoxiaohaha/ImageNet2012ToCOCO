@@ -2,8 +2,8 @@
 You can convert ImageNet to COCO by this repository(But only support Object Detection).
 # 中文
 本项目以ImageNet2012为例，来生成COCO中的`instances_train.json`和`instances_val.json`文件，仅用于目标检测任务（segmentation、图像分类任务目前尚未支持）。
-我们项目的文件布局如下所示。
 如果想用于图像分类任务，可参考此项目：https://github.com/beerys/Convert_Imagenet_to_COCO_format
+我们项目的文件布局如下所示。
 ```
 |—— resources
     |—— meta.mat
